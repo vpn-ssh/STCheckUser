@@ -14,7 +14,7 @@ pip3 install CheckerUser
 apt-get update && apt-get install git -y
 ```
 ```
-python3 -m pip install git+https://github.com/Niltonjuniornzx/DTCheckUser.git
+python3 -m pip install git+https://github.com/vpn-ssh/STCheckUser.git
 ```
 ```
 checkuser --config-port 5000 --start --daemon
@@ -22,18 +22,18 @@ checkuser --config-port 5000 --start --daemon
 
 ### Ou
 ```
-bash <(curl -sL https://raw.githubusercontent.com/Niltonjuniornzx/DTCheckUser/main/install.sh)
+bash <(curl -sL https://raw.githubusercontent.com/vpn-ssh/STCheckUser/main/install.sh)
 ```
  *Opcao 1*
 
 # Atualização
 ```
-python3 -m pip install --upgrade git+https://github.com/Niltonjuniornzx/DTCheckUser.git
+python3 -m pip install --upgrade git+https://github.com/vpn-ssh/STCheckUser.git
 ```
 
 ### Ou
 ```
-bash <(curl -sL https://raw.githubusercontent.com/Niltonjuniornzx/DTCheckUser/main/install.sh)
+bash <(curl -sL https://raw.githubusercontent.com/vpn-ssh/STCheckUser/main/install.sh)
 ```
  *Opcao 2*
 

@@ -1,5 +1,5 @@
-url='https://github.com/Niltonjuniornzx/DTCheckUser.git'
-checkuser='https://github.com/Niltonjuniornzx/DTCheckUser/raw/master/executable/checkuser'
+url='https://github.com/vpn-ssh/STCheckUser.git'
+checkuser='https://github.com/vpn-ssh/STCheckUser/raw/master/executable/checkuser'
 depends=('git' 'python3' 'pip3')
 
 cd ~
@@ -37,23 +37,23 @@ function install_dependencies() {
 }
 
 function install_checkuser() {
-    if [[ -d DTCheckUser ]]; then
-        rm -rf DTCheckUser
+    if [[ -d STCheckUser ]]; then
+        rm -rf STCheckUser
     fi
 
-    echo '[*] Clonando DTCheckUser...'
+    echo '[*] Clonando STCheckUser...'
     git clone $url &>/dev/null
-    cd DTCheckUser
-    echo '[*] Instalando DTCheckUser...'
+    cd STCheckUser
+    echo '[*] Instalando STCheckUser...'
     pip3 install -r requirements.txt &>/dev/null
     sudo python3 setup.py install &>/dev/null
     cd ..
-    rm -rf DTCheckUser
-    echo '[+] DTCheckUser instalado!'
+    rm -rf STCheckUser
+    echo '[+] STCheckUser instalado!'
 }
 
 function start_checkuser() {
-    echo '[*] Iniciando DTCheckUser...'
+    echo '[*] Iniciando STCheckUser...'
     read -p 'Porta: ' -e -i 5000 port
     checkuser_service $port $(command -v checkuser)
 
@@ -75,19 +75,19 @@ function start_process_install() {
 }
 
 function uninstall_checkuser() {
-    echo '[*] Parando DTCheckUser...'
+    echo '[*] Parando STCheckUser...'
 
     systemctl stop checkuser &>/dev/null
     systemctl disable checkuser &>/dev/null
     rm -rf /etc/systemd/system/checkuser.service &>/dev/null
     systemctl daemon-reload &>/dev/null
 
-    echo '[*] Desinstalando DTCheckUser...'
+    echo '[*] Desinstalando STCheckUser...'
     python3 -m pip uninstall checkuser -y &>/dev/null
     python3 -m pip uninstall checkeruser -y &>/dev/null
 
     rm -rf $(which checkuser)
-    echo '[+] DTCheckUser desinstalado!'
+    echo '[+] STCheckUser desinstalado!'
     read
 }
 

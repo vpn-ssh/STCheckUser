@@ -8,7 +8,7 @@ VERSION = __version__
 DESCRIPTION = open('README.md').read()
 AUTHOR = __author__
 AUTHOR_EMAIL = __email__
-URL = 'https://github.com/Niltonjuniornzx/DTCheckUser'
+URL = 'https://github.com/vpn-ssh/STCheckUser'
 LICENSE = 'MIT'
 
 setup(
